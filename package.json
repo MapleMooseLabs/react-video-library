@@ -4,9 +4,9 @@
   "description": "React video library based using VideoJS",
   "main": "dist/index.js",
   "scripts": {
-    "lint": "eslint src example/*.js ./example/src",
+    "lint": "eslint src demo/*.js ./demo/src",
     "test": "npm run lint && npm run build && npm run test:unit",
-    "test:unit": "ava --verbose test.js example/test.js",
+    "test:unit": "ava --verbose test.js demo/test.js",
     "watch": "babel -w -d dist src",
     "start": "npm run watch",
     "clean": "rimraf dist",
