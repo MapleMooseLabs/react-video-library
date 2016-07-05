@@ -1,0 +1,99 @@
+.video {
+  overflow: hidden;
+  @include thumbnail(1);
+
+  @include from(sm) {
+    @include thumbnail(2);
+  };
+
+  @include from(md) {
+    @include thumbnail(3);
+  };
+
+
+  background-color: $thumbnail-bg-colour;
+  transition: all 0.1s linear;
+  &--active,
+  &:hover {
+    background-color: $thumbnail-active-bg-colour;
+  }
+
+  // Play Button
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // background-image: url('../../assets/images/play-button.png');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+}
+
+.video__inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 12px;
+  color: $thumbnail-text-colour;
+  z-index: 1;
+
+  &--has-poster {
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba($thumbnail-bg-colour, 0.3);
+      z-index: -1;
+    }
+
+    &:hover:before {
+      background-color: rgba($thumbnail-active-bg-colour, 0.3);
+    }
+  }
+}
+
+  .video__index {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: $thumbnail-index-colour;
+    font-size: 70px;
+
+    @include from(sm) {
+      font-size: 56px;
+      font-size: 10vw;
+    };
+
+
+    @include from(md) {
+      font-size: 56px;
+    };
+
+    padding: 6px;
+    padding: 0.5vw;
+  }
+
+.video__poster {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

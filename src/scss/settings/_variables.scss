@@ -1,0 +1,31 @@
+/**
+*  VARIABLES
+*/
+
+/** GLOBAL **/
+$font-family-light: 'Roboto-Light, Helvetica';
+$font-family-normal: 'Roboto-Medium, Helvetica';
+$font-family-bold: 'Roboto-Bold, Helvetica';
+
+/** Breakpoints **/
+$breakpoints: (
+  'xs': 320px,
+  'sm': 480px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1366px,
+  'xxl': 2160px
+);
+$breakpoint-keys: map-keys($breakpoints);
+
+/** LIBRARY **/
+
+
+/** THUMBNAILS **/
+$thumbnail-bg-colour: #670f21;
+$thumbnail-active-bg-colour: #a94b24;
+$thumbnail-text-colour: #fff;
+$thumbnail-index-colour: rgba($thumbnail-text-colour, 0.5);
+$thumbnail-text-size: 18px;
+$thumbnail-index-size: 70px;
+$thumbnail-index-size-vh: 10vw;

@@ -1,0 +1,10 @@
+/**
+* LIBRARY COMPONENT
+*/
+
+@import "utilities/mixins";
+.library {
+  @include clearfix;
+  max-width: 800px;
+  margin: auto;
+}
