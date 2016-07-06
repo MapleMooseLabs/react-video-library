@@ -78,7 +78,6 @@
     "rimraf": "^2.5.3",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
-    "video.js": "^5.10.4",
     "watch": "^0.19.1",
     "webpack": "^1.13.1"
   },
