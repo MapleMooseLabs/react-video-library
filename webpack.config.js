@@ -36,6 +36,7 @@ module.exports = {
         test: /\.jsx?$/,
         loaders: ['babel'],
         include: path.join(__dirname, 'src'),
+        exclude: path.join(__dirname, 'src/lib'),
       },
       {
         test: /\.css$/,
@@ -49,11 +50,23 @@ module.exports = {
           'autoprefixer',
           'sass',
         ],
+      },
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loaders: ['url?limit=10000&mimetype=application/font-woff&name=fonts/[hash].[ext]'],
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loaders: ['file?name=fonts/[hash].[ext]'],
+      },
+      {
+        test: /\.(png|jpg|gif|ico)$/,
+        loaders: ['file?name=images/[hash].[ext]'],
       }
     ],
   }, // module
 
   sassLoader: {
-    includePaths: [path.resolve(__dirname, "./src/demo/scss")]
+    includePaths: [path.resolve(__dirname, "./src/scss")]
   },
 };

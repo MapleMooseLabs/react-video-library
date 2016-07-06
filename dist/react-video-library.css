@@ -516,7 +516,7 @@ textarea {
     transform-origin: 149px 48px;
     margin: 0; }
 
-.player__video {
+.player__video-container {
   color: rgba(0, 0, 0, 0.54);
   font-size: 13px;
   line-height: 18px;

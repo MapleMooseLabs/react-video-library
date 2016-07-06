@@ -130,7 +130,7 @@ var Player = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'player__video' },
+              { className: 'player__video-container' },
               this.renderVideo()
             )
           )

@@ -77,7 +77,7 @@ export default class Player extends React.Component {
             </header>
 
 
-            <div className='player__video'>
+            <div className='player__video-container'>
               { this.renderVideo() }
             </div>
           </div>
