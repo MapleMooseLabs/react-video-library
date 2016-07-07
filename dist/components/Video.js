@@ -52,11 +52,7 @@ var Video = function (_React$Component) {
 
 
       if (description.length > 0) {
-        return _react2.default.createElement(
-          'p',
-          null,
-          description
-        );
+        return _react2.default.createElement('p', { dangerouslySetInnerHTML: { __html: description } });
       }
 
       return null;

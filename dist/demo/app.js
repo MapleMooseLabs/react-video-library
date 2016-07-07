@@ -98,6 +98,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  _createClass(App, [{
 	    key: 'render',
 	    value: function render() {
+	      var htmlDescription = 'This description contains <strong>html</strong>.';
 	      return _react2.default.createElement(
 	        'div',
 	        null,
@@ -106,12 +107,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	          { className: cx('video-library') },
 	          _react2.default.createElement(_.Video, {
 	            title: 'Elephants Dream',
-	            description: '',
+	            description: htmlDescription,
 	            videoSrc: 'http://d2zihajmogu5jn.cloudfront.net/elephantsdream/ed_hd.mp4',
 	            poster: 'http://d2zihajmogu5jn.cloudfront.net/elephantsdream/poster.png' }),
 	          _react2.default.createElement(_.Video, {
 	            title: 'Oceans',
-	            description: '',
+	            description: 'This one does not.',
 	            videoSrc: 'http://vjs.zencdn.net/v/oceans.mp4',
 	            poster: 'http://vjs.zencdn.net/v/oceans.png' })
 	        )
@@ -11381,11 +11382,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	      if (description.length > 0) {
-	        return _react2.default.createElement(
-	          'p',
-	          null,
-	          description
-	        );
+	        return _react2.default.createElement('p', { dangerouslySetInnerHTML: { __html: description } });
 	      }
 	
 	      return null;

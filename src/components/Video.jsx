@@ -21,7 +21,7 @@ export default class Video extends React.Component {
 
     if (description.length > 0) {
       return (
-        <p>{ description }</p>
+        <p dangerouslySetInnerHTML={{ __html: description }} />
       );
     }
 
